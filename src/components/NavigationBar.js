@@ -1,15 +1,10 @@
-import { useState } from "react";
-import SearchBar from "./SearchBar";
-import Logo from "./Logo";
-import NumResults from "./NumResults";
 
-const NavigationBar = () => {
-    const [query, setQuery] = useState("");
+
+const NavigationBar = ({children}) => {
+    
   return (
     <nav className="nav-bar">
-      <Logo />
-      <SearchBar query={query} setQuery={setQuery}/>
-      <NumResults />
+      {children}
     </nav>
   );
 };
